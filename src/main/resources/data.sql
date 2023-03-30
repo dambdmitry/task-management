@@ -4,7 +4,6 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE users(
     id int NOT NULL ,
     username varchar(255),
-    password varchar(255),
     PRIMARY KEY (id)
 );
 
