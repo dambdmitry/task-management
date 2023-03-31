@@ -1,5 +1,6 @@
 package com.damb.taskmanagment.converter;
 
+import com.damb.taskmanagment.converter.exceptions.IncorrectStateToConvertException;
 import com.damb.taskmanagment.domain.Status;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
@@ -20,6 +21,6 @@ public class StatusConverter implements AttributeConverter<Status, String> {
         return Arrays.stream(Status.values())
                 .filter(status -> status.getName().equals(statusName))
                 .findAny()
-                .orElseThrow(IllegalAccessError::new);
+                .orElseThrow(() -> new IncorrectStateToConvertException(String.format("status name %s does not exist", statusName)));
     }
 }
