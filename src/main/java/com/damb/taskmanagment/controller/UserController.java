@@ -2,8 +2,8 @@ package com.damb.taskmanagment.controller;
 
 import com.damb.taskmanagment.domain.User;
 import com.damb.taskmanagment.dto.UserDTO;
-import com.damb.taskmanagment.service.UserService;
-import com.damb.taskmanagment.service.exceptions.UserNotFoundException;
+import com.damb.taskmanagment.service.users.UserService;
+import com.damb.taskmanagment.service.users.exceptions.UserNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

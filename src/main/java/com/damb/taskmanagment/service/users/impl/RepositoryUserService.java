@@ -1,11 +1,11 @@
-package com.damb.taskmanagment.service.impl;
+package com.damb.taskmanagment.service.users.impl;
 
 import com.damb.taskmanagment.converter.UserDTOConverter;
 import com.damb.taskmanagment.domain.User;
 import com.damb.taskmanagment.dto.UserDTO;
 import com.damb.taskmanagment.repository.UserRepository;
-import com.damb.taskmanagment.service.UserService;
-import com.damb.taskmanagment.service.exceptions.UserNotFoundException;
+import com.damb.taskmanagment.service.users.UserService;
+import com.damb.taskmanagment.service.users.exceptions.UserNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,7 +31,8 @@ public class RepositoryUserService implements UserService {
     @Override
     public User getUserByName(String username) {
         Optional<User> foundUser = repository.findByUsername(username);
-        return foundUser.orElseThrow(() -> new UserNotFoundException(String.format("User with name %s not found", username)));
+        return foundUser
+                .orElseThrow(() -> new UserNotFoundException(String.format("User with name %s not found", username)));
     }
 
     @Override

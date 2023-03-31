@@ -14,7 +14,7 @@ CREATE TABLE tasks(
     author_id int NOT NULL ,
     executor_id int,
     status varchar(15),
-    time_to_execute date,
+    created date,
     PRIMARY KEY (id),
     FOREIGN KEY (author_id) REFERENCES users(id),
     FOREIGN KEY (executor_id) REFERENCES users(id)

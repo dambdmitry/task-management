@@ -1,4 +1,4 @@
-package com.damb.taskmanagment.service.exceptions;
+package com.damb.taskmanagment.service.users.exceptions;
 
 public class UserNotFoundException extends RuntimeException{
     public UserNotFoundException(String message) {
