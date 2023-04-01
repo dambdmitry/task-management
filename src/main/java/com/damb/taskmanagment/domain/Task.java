@@ -1,9 +1,6 @@
 package com.damb.taskmanagment.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -12,6 +9,7 @@ import java.time.LocalDateTime;
 @Data
 public class Task {
     @Id
+    @GeneratedValue
     private Long id;
     private String code;
     private String name;
@@ -24,4 +22,11 @@ public class Task {
     private Status status;
     private LocalDateTime created;
 
+    public LocalDateTime getCreated() {
+        return created;
+    }
+
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
+    }
 }

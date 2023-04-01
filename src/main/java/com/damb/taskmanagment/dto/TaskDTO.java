@@ -12,10 +12,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TaskDTO implements Serializable {
-    @Nonnull
+//    @Nonnull
     private String code;
     private String name;
-    @Nonnull
+//    @Nonnull
     private Long authorId;
     private Long executorId;
     private Status status;

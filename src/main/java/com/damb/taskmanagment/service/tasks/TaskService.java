@@ -3,7 +3,6 @@ package com.damb.taskmanagment.service.tasks;
 import com.damb.taskmanagment.domain.Status;
 import com.damb.taskmanagment.domain.Task;
 import com.damb.taskmanagment.dto.TaskDTO;
-import com.damb.taskmanagment.dto.UserDTO;
 
 import java.util.List;
 
@@ -16,9 +15,9 @@ public interface TaskService {
 
     Task getTaskByCode(String code);
 
-    List<Task> getTaskByExecutor(Long executorId);
+    List<Task> getTasksByExecutor(Long executorId);
 
-    List<Task> getTaskByAuthor(Long authorId);
+    List<Task> getTasksByAuthor(Long authorId);
 
     List<Task> getAllTasks();
 }

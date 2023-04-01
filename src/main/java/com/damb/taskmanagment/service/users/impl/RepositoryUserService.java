@@ -14,8 +14,8 @@ import java.util.Optional;
 @Service
 public class RepositoryUserService implements UserService {
 
-    private UserRepository repository;
-    private UserDTOConverter userConverter;
+    private final UserRepository repository;
+    private final UserDTOConverter userConverter;
 
     public RepositoryUserService(UserRepository repository, UserDTOConverter userConverter) {
         this.repository = repository;
